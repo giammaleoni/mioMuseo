@@ -1,0 +1,48 @@
+<div>
+	<a ui-sref="overview" class="pull-right btn btn-primary btn-outline btn-rounded">Back to overview</a>
+	<h2>Edit your profile </br><small>Why is Ani Theme so awesome?</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+
+			<form role="form">
+
+				<div class="form-content">
+
+					<div class="form-group">
+						<label for="nick">Email</label>
+						<!-- <input type="email" class="form-control input-underline input-lg" id="email" placeholder="Email" ng-model="userdata.password.email" required="true"> -->
+						<p class="input-lg input-underline2">{{userData.password.email}}</p>
+					</div></br>
+
+					<div class="form-group">
+						<label for="password">Password</label>
+						<!-- <input type="password" class="form-control input-underline input-lg" id="password" placeholder="Password" ng-model="userdata.password" required="true"> -->
+						<p class="input-lg input-underline2">*************</p>
+					</div></br>
+
+					<div class="form-group">
+						<label for="nick">Nickname</label>
+						<input type="text" class="form-control input-underline2 input-lg" id="nick" placeholder="Nickname" ng-model="newNickname" required="true" ng-value="profile.nick">
+					</div></br>
+
+					<div class="">
+						<label for="profilePic">Profile picture</label></br>
+						<img ng-src="images/flat-avatar.png"  class="profile-pic" ng-if="!newProfilePic && !profile.pic" />
+						<img ng-src="{{profile.pic}}" class="profile-pic" ng-if="!newProfilePic" />
+						<img data-ng-src="{{newProfilePic}}" class="profile-pic" ng-if="newProfilePic"/>
+						<div class="btn btn-primary btn-primary btn-file">
+							Browse&hellip; <input type="file" id="profilePic" fileread="newProfilePic" accept="image/*">
+						</div>
+					</div>
+
+				</div>
+
+				</br>
+				<button type="submit" class="btn btn-primary btn-outline btn-lg btn-rounded" ng-click="save(newNickname, newProfilePic)">Save changes</button>
+				<!-- <button type="submit" class="btn btn-white btn-outline btn-lg btn-rounded" ng-click="submit('signup', user, password)">Signup</button> -->
+				<!-- <button type="submit" class="btn btn-white btn-outline btn-lg btn-rounded" ng-click="submit('logout')">Logout</button> -->
+
+			</form>
+		</div>
+	</div>
+</div>

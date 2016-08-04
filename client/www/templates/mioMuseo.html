@@ -1,0 +1,12 @@
+<ion-view title="mioMuseo">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+        <ion-list>
+            <ion-item class="item-thumbnail-left" ui-sref="app.todos.detail({id: museo.id}" ng-repeat="museo in musei">
+                <img ng-src="{{museo.pic}}">
+                <h2>{{museo.nick}}</h2>
+                <p>{{museo.detail}}</p>
+            </ion-item>
+        </ion-list>
+        <button id="mioMuseo-button1" class="button button-stable  button-block button-clear">Aggiungi Museo (camera QR code)</button>
+    </ion-content>
+</ion-view>

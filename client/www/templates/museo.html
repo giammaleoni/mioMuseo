@@ -1,0 +1,21 @@
+<ion-view title="Prado">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div class="button-bar">
+            <button id="stop" class="button button-stable  button-block icon ion-stop"></button>
+            <button id="back" class="button button-stable  button-block icon ion-skip-backward"></button>
+            <button id="play" class="button button-stable  button-block icon ion-play"></button>
+            <button id="front" class="button button-stable  button-block icon ion-skip-forward"></button>
+        </div>
+        <ion-list>
+            <ion-item class="item-thumbnail-left">
+                <img ng-src="{{museo.pic}}">
+                <h2>{{museo.nick}}</h2>
+                <p>{{museo.detail}}</p>
+            </ion-item>
+            <ion-item class="item-divider">Audio</ion-item>
+            <ion-item>Audio1</ion-item>
+            <ion-item>Audio2</ion-item>
+            <ion-item>Audio3</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

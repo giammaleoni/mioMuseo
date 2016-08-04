@@ -1,0 +1,36 @@
+<div>
+	<a ui-sref="overview" class="pull-right btn btn-primary btn-outline btn-rounded">Back to Overview</a>
+	<h2>Audio Manager Dashboard<small> </small></h2>
+	<span class="glyphicon glyphicon-dashboard bg-fade" style="z-index:-1"></span>
+	<div class="jumbotron">
+		<div class="container">
+			<p>
+				Instructions:
+				<ul>
+					<li>Click on browse to look for any audio file on your desktop and to add them to the list</li>
+					<li>'ID' field will be the number linked to the room or the item in the museum</li>
+					<li>Double click on the field 'ID' to edit it manually</li>
+					<li>Select one or more lines and then click on 'Remove selected items' to remove them from the list</li>
+					<li>Any change must be saved before being visible in the app</li>
+				</ul>
+			</p>
+			<div class="">
+				<button type="button" id="removeFirstRow" class="btn btn-warning btn-outline btn-rounded" ng-click="deleteSelected()">Remove selected items</button>
+				<div ui-grid="gridOptions" ui-grid-selection ui-grid-edit ui-grid-resize-columns class="myGrid"></div>
+			</div>
+
+			<p>Add new audio file/files here</p>
+			<div class="input-group">
+				<span class="input-group-btn">
+					<span class="btn btn-primary btn-file">
+						Browse&hellip;<input type="file" accept="audio/*" multiple filesread="audioList.list" uris="audioList.uris">
+					</span>
+				</span>
+				<input type="text" class="form-control" readonly ng-model="audioList.list.length">
+			</div>
+
+			<button type="submit" class="btn btn-primary btn-outline btn-lg btn-rounded" ng-click="saveList(audios)">Save changes</button>
+		</div>
+
+	</div>
+</div>
